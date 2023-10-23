@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <style>
+    #Q {
+            float: left;
+            border: 1px solid saddlebrown;
+            margin: 3%;
+            width: 27%;
+            text-align: center;
+    }
+    #C {
+            float: left;
+            border: 1px solid saddlebrown;
+            margin: 3%;
+            width: 27%;
+            text-align: center;
+        }
+        #H {
+            float: left;
+            border: 1px solid saddlebrown;
+            margin: 3%;
+            width: 27%;
+            text-align: center;
+        }
+        #I {
+            float: left;
+            border: 1px solid saddlebrown;
+            margin: 3%;
+            width: 27%;
+            text-align: center;
+        }
+        #A {
+            float: left;
+            border: 1px solid saddlebrown;
+            margin: 3%;
+            width: 27%;
+            text-align: center;
+        }
+        #N {
+            float: left;
+            border: 1px solid saddlebrown;
+            margin: 3%;
+            width: 27%;
+            text-align: center;
+        }
+
+        #logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: fit-content;
+        }
+
+        #logo > img {
+          height: 150px;
+        }
+  </style>
+  <body>
+    <div id="logo">
+      <img src="data:image/png;base64,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">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Shop Dunk</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+
+      
+      <div class="chupapi">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/xqyUdNxWazA?si=4durVYk3Fz47I5NI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div style="font-size: 30px;">Iphone 15 series</div>
+        <div class="minh oc lon">
+            <div id="Q">
+              <h1>Phone 15 128GB Chính Hãng VN/A </h1>
+              <img src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1648981100.jpeg" style="height: 300px;">
+              <h2><del>25.990.000đ</del></h2>
+              <h3 style="font-size: 30px; color: red;">21.489.000đ</h3>
+      </div>
+      <div id="C">
+       <h1>iPhone 15 Pro 128GB - Chính hãng VN/A </h1>
+       <img src="https://cdn1.viettelstore.vn/Images/Product/ProductImage/693597584.jpeg" style="height:300px;">
+              <h2><del>55.990.000đ</del></h2>
+              <h3 style="font: size 25px;color: red;">50.990.000đ</h3>
+      </div>
+      <div id="H">
+        <h1>iPhone 15 Plus 128GB - Chính hãng VN/A</h1>
+        <img src="https://cdn1.viettelstore.vn/Images/Product/ProductImage/471330151.jpeg" style="height: 300px;">
+             <h2><del>31.990.000đ</del></h2>
+             <h3 style="font-size: 30px;color: red;">30.490.000đ</h3>
+      </div>
+      <div id="I">
+        <h1>iPhone 15 Pro Max 1TB - Chính hãng VN/A</h1>
+        <img src="https://cdn1.viettelstore.vn/Images/Product/ProductImage/382266774.jpeg" style="height: 300px;">
+        <h2><del>46.990.000đ</del></h2>
+       <h3 style="font-size: 30px;color: red;">44.490.000đ</h3>
+      </div>
+      <div id="A">
+<h1>Ốp lưng ZAGG Crystal Palace Snap Clear dành cho iPhone 15 Pro Max</h1>
+<img src="https://cdn1.viettelstore.vn/Images/Product/ProductImage/2013506703.jpeg" style="height: 300px;">
+<h2 style="font-size: 30px;color: red;">709.000</h2>
+      </div>
+      <div id="N">
+     <h1>AirPods Pro (Gen 2)</h1>
+     <img src="https://cdn1.viettelstore.vn/Images/Product/ProductImage/69843960.jpeg" style="height: 300px;">
+     <h2><del>6.990.000đ</del></h2>
+     <h3 style="font-size: 30px;color: red;"> 5.690.000đ</h3>
+      </div>
+  </body>
+</html>
